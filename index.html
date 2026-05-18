@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Pemeliharaan Alat Medis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏥 Log Pemeliharaan Alat Medis</h1>
+            <p>Rumah Sakit / Klinik Sejahtera</p>
+        </header>
+
+        <!-- Form Input -->
+        <div class="card">
+            <h2>Form Pemeliharaan Baru</h2>
+            <form id="maintenanceForm">
+                <div class="form-group">
+                    <label>Nama Alat:</label>
+                    <input type="text" id="equipmentName" placeholder="Contoh: Infusion Pump" required>
+                </div>
+                <div class="form-group">
+                    <label>Tanggal Perawatan:</label>
+                    <input type="date" id="maintenanceDate" required>
+                </div>
+                <div class="form-group">
+                    <label>Teknisi/Perawat:</label>
+                    <input type="text" id="technician" placeholder="Nama Teknisi" required>
+                </div>
+                <div class="form-group">
+                    <label>Status:</label>
+                    <select id="status">
+                        <option value="Baik">Baik</option>
+                        <option value="Perbaikan">Perlu Perbaikan</option>
+                        <option value="Rusak">Rusak</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Catatan:</label>
+                    <textarea id="notes" placeholder="Kerusakan ringan / Penggantian suku cadang, dll"></textarea>
+                </div>
+                <button type="submit" class="btn-save">Simpan Log</button>
+            </form>
+        </div>
+
+        <!-- Tabel Data -->
+        <div class="card">
+            <h2>Riwayat Pemeliharaan</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama Alat</th>
+                        <th>Tanggal</th>
+                        <th>Teknisi</th>
+                        <th>Status</th>
+                        <th>Catatan</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="logTableBody">
+                    <!-- Data akan muncul di sini lewat JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
